@@ -27,7 +27,9 @@
         "codeception/verify": "~0.3.1",
         "codeception/specify": "~0.4.3",
 
-        "guzzlehttp/guzzle": ">=4.1.4 <7.0"
+        "guzzlehttp/guzzle": ">=4.1.4 <7.0",
+        "yii-cms/yii2-robokassa": "dev-master",
+        "lenarx/yii2-cms-rbac": "dev-master"
     },
     "config": {
         "process-timeout": 1800
