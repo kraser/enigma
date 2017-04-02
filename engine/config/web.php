@@ -12,17 +12,18 @@ $config =
         '@engineroot' => __DIR__ . '/../',
         '@lib' => '@engineroot/tests',
         'myViews' => '@app/myViews',
-        '@cucumber' => '@myViews/cucumber'
+        '@cucumber' => '@myViews/cucumber',
+        '@fuckActions' => '@app/actions'
         
     ],
     'version' => '0.0.1',
     'language' => 'ru-RU',
     'name' => 'Сайт куртуазного маньеризма',
-    'catchAll' => 
-    [
-        'site/say',
-        'message' => 'Перехват'
-    ],
+//    'catchAll' => 
+//    [
+//        'site/say',
+//        'message' => 'Перехват'
+//    ],
     'defaultRoute' => 'site/fuck',
     'components' => 
     [
