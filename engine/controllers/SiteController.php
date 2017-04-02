@@ -126,7 +126,8 @@ class SiteController extends Controller
     
     public function actionSay ( $message = 'Hello' )
     {
-        return $this->render ( 'say', [ 'message' => $message ] );
+        $output = Yii::$app->defaultRoute;
+        return $this->render ( 'say', [ 'message' => $message, 'output' => $output ] );
     }
     
     public function actionEntry()
@@ -143,6 +144,12 @@ class SiteController extends Controller
             // either the page is initially displayed or there is some validation error
             return $this->render('entry', ['model' => $model]);
         }
+    }
+    
+    public function actionFuck ()
+    {
+        $output = "27Fu03Kate69";
+        return $this->render ( 'say', [ 'message' => "Fuck", 'output' => $output ] );
     }
 
 }

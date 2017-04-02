@@ -7,6 +7,23 @@ $config =
     'id' => 'basic',
     'basePath' => dirname ( __DIR__ ),
     'bootstrap' => [ 'log' ],
+    'aliases' =>
+    [
+        '@engineroot' => __DIR__ . '/../',
+        '@lib' => '@engineroot/tests',
+        'myViews' => '@app/myViews',
+        '@cucumber' => '@myViews/cucumber'
+        
+    ],
+    'version' => '0.0.1',
+    'language' => 'ru-RU',
+    'name' => 'Сайт куртуазного маньеризма',
+    'catchAll' => 
+    [
+        'site/say',
+        'message' => 'Перехват'
+    ],
+    'defaultRoute' => 'site/fuck',
     'components' => 
     [
         'request' => 
@@ -61,6 +78,7 @@ $config =
             'showScriptName' => false,
             'rules' => 
             [
+            
             ],
         ],
         
@@ -68,6 +86,13 @@ $config =
     'timeZone' => "Asia/Novosibirsk",
     'runtimePath' => '/tmp/runtime/',
     'params' => $params,
+    'controllerMap' =>
+    [
+        'check' => 'app\controllers\CountryController'
+    ],
+    'layout' => 'layout',
+    'layoutPath' => '@cucumber',
+    'viewPath' => '@myViews'
 ];
 
 if (YII_ENV_DEV) {
