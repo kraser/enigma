@@ -5,11 +5,10 @@ namespace app\controllers;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
+use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
-use app\models\EntryForm;
-use app\actions;
 
 class SiteController extends Controller
 {
@@ -44,23 +43,15 @@ class SiteController extends Controller
      */
     public function actions()
     {
-        $actions = 
-        [
-            'error' => 
-            [
+        return [
+            'error' => [
                 'class' => 'yii\web\ErrorAction',
             ],
-            'captcha' => 
-            [
+            'captcha' => [
                 'class' => 'yii\captcha\CaptchaAction',
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
-            'rape' => 
-            [
-                'class' => 'app\actions\RapeAction'
-            ]
         ];
-        return $actions;
     }
 
     /**
@@ -76,7 +67,7 @@ class SiteController extends Controller
     /**
      * Login action.
      *
-     * @return string
+     * @return Response|string
      */
     public function actionLogin()
     {
@@ -96,7 +87,7 @@ class SiteController extends Controller
     /**
      * Logout action.
      *
-     * @return string
+     * @return Response
      */
     public function actionLogout()
     {
@@ -108,7 +99,7 @@ class SiteController extends Controller
     /**
      * Displays contact page.
      *
-     * @return string
+     * @return Response|string
      */
     public function actionContact()
     {
@@ -132,33 +123,4 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
-    
-    public function actionSay ( $message = 'Hello' )
-    {
-        $output = Yii::$app->defaultRoute;
-        return $this->render ( 'say', [ 'message' => $message, 'output' => $output ] );
-    }
-    
-    public function actionEntry()
-    {
-        $model = new EntryForm();
-
-        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
-            // valid data received in $model
-
-            // do something meaningful here about $model ...
-
-            return $this->render('entry-confirm', ['model' => $model]);
-        } else {
-            // either the page is initially displayed or there is some validation error
-            return $this->render('entry', ['model' => $model]);
-        }
-    }
-    
-    public function actionFuck ()
-    {
-        $output = "27Fu03Kate69";
-        return $this->render ( 'say', [ 'message' => "Fuck", 'output' => $output ] );
-    }
-
 }
