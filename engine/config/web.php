@@ -52,6 +52,8 @@ $config = [
         ],
         */
     ],
+    'timeZone' => "Asia/Novosibirsk",
+    'runtimePath' => '/tmp/runtime/',
     'params' => $params,
 ];
 
