@@ -42,9 +42,17 @@ $config = [
                 ],
             ],
         ],
-        'db' => $db,
-        /*
-        'urlManager' => [
+        'mysqlDb' => 
+        [
+            'class' => 'yii\db\Connection',
+            'dsn' => 'mysql:host=localhost;dbname=enigma',
+            'username' => 'root',
+            'password' => 'root',
+            'charset' => 'utf8',
+        ],
+        'pgsqlDb' => require(__DIR__ . '/db.php'),
+        /*'urlManager' =>
+        [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
