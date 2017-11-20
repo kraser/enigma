@@ -51,14 +51,15 @@ $config = [
             'charset' => 'utf8',
         ],
         'pgsqlDb' => require(__DIR__ . '/db.php'),
-        /*'urlManager' =>
+        'urlManager' =>
         [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'rules' => [
+            'rules' => 
+            [
             ],
         ],
-        */
+        
     ],
     'timeZone' => "Asia/Novosibirsk",
     'runtimePath' => '/tmp/runtime/',
