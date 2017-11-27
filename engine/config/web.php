@@ -10,7 +10,22 @@ $config = [
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
+        '@engineroot' => __DIR__ . '/../',
+        '@lib' => '@engineroot/tests',
+        '@mytheme' => '@app/myViews',
+        '@cotheme' => '@app/views',
+        '@cuber' => '@mytheme/cucumber'
+        
     ],
+    'version' => '0.0.1',
+    'language' => 'ru-RU',
+    'name' => 'Сайт куртуазного маньеризма',
+//    'catchAll' => 
+//    [
+//        'site/say',
+//        'message' => 'Перехват'
+//    ],
+    'defaultRoute' => 'site/fuck',
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
@@ -64,6 +79,14 @@ $config = [
     'timeZone' => "Asia/Novosibirsk",
     'runtimePath' => '/tmp/runtime/',
     'params' => $params,
+    'controllerMap' =>
+    [
+        'check' => 'app\controllers\CountryController'
+    ],
+    //Альтернативное имя файла layout 
+    'layout' => 'layout',
+    'layoutPath' => '@cuber',
+//    'viewPath' => '@app/myViews'
 ];
 
 if (YII_ENV_DEV) {

@@ -9,6 +9,14 @@ use app\models\Currency;
 
 class CountryController extends Controller
 {
+    public $title;
+    public function __construct ( $id, $module, $config = array () )
+    {
+        parent::__construct ( $id, $module, $config );
+        $this->viewPath = $this->module->getViewPath() . DIRECTORY_SEPARATOR . 'country';
+        $this->title = "kshkshfks";
+    }
+    
     public function actionIndex()
     {
         $query = Country::find();
