@@ -14,7 +14,8 @@ $config = [
         '@lib' => '@engineroot/tests',
         '@mytheme' => '@app/myViews',
         '@cotheme' => '@app/views',
-        '@cuber' => '@mytheme/cucumber'
+        '@cuber' => '@mytheme/cucumber',
+        '@fuckActions' => '@app/actions'
         
     ],
     'version' => '0.0.1',
@@ -86,7 +87,7 @@ $config = [
     //Альтернативное имя файла layout 
     'layout' => 'layout',
     'layoutPath' => '@cuber',
-//    'viewPath' => '@app/myViews'
+    'viewPath' => '@cotheme'
 ];
 
 if (YII_ENV_DEV) {

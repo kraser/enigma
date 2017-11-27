@@ -10,6 +10,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\EntryForm;
+use app\actions;
 
 class SiteController extends Controller
 {
@@ -44,15 +45,23 @@ class SiteController extends Controller
      */
     public function actions()
     {
-        return [
-            'error' => [
+        $actions = 
+        [
+            'error' => 
+            [
                 'class' => 'yii\web\ErrorAction',
             ],
-            'captcha' => [
+            'captcha' => 
+            [
                 'class' => 'yii\captcha\CaptchaAction',
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
+            'rape' => 
+            [
+                'class' => 'app\actions\RapeAction'
+            ]
         ];
+        return $actions;
     }
 
     /**
