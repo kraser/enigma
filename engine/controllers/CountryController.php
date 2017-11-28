@@ -6,6 +6,7 @@ use yii\web\Controller;
 use yii\data\Pagination;
 use app\models\Country;
 use app\models\Currency;
+use app\models\ContactForm;
 
 class CountryController extends Controller
 {
@@ -19,6 +20,7 @@ class CountryController extends Controller
     
     public function actionIndex()
     {
+        $this->title = "ljlsjflsj";
         $query = Country::find();
 
         $pagination = new Pagination([
@@ -55,5 +57,11 @@ class CountryController extends Controller
             'countries' => $countries,
             'pagination' => $pagination,
         ]);
+    }
+    
+    public function actionGoods ()
+    {
+        $model = new \app\models\ContactForm;
+        $model->name = 'example';
     }
 }
