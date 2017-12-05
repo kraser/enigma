@@ -63,5 +63,9 @@ class CountryController extends Controller
     {
         $model = new \app\models\ContactForm;
         $model->name = 'example';
+        $model->subject = "Fucking";
+        return $this->render('goods', [
+            'model' => $model
+        ]);
     }
 }
