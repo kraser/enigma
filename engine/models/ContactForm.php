@@ -46,8 +46,8 @@ class ContactForm extends Model
             'verifyCode' => 'Код подтверждения',
             'name' => 'Ваше имя',
             'email' => 'Your email address',
-            'subject' => 'Subject',
-            'body' => 'Content',
+            'subject' => \Yii::t('app', 'Subject'),
+            'body' => \Yii::t('app', 'Content')
         ];
     }
 
