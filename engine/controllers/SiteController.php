@@ -163,7 +163,8 @@ class SiteController extends Controller
     
     public function actionFuck ()
     {
-        $output = "27Fu03Kate69";
+        $version = phpversion();
+        $output = "27Fu03Kate69 : " . $version;
         return $this->render ( 'say', [ 'message' => "Fuck", 'output' => $output ] );
     }
 
