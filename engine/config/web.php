@@ -2,6 +2,7 @@
 
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
+$modules = require __DIR__ . '/modules.php';
 
 $config = [
     'id' => 'basic',
@@ -87,7 +88,8 @@ $config = [
     //Альтернативное имя файла layout 
     'layout' => 'layout',
     'layoutPath' => '@cuber',
-    'viewPath' => '@cotheme'
+    'viewPath' => '@cotheme',
+    'modules' => $modules
 ];
 
 if (YII_ENV_DEV) {
