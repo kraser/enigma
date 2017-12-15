@@ -4,6 +4,7 @@ namespace app\modules\price\controllers;
 
 use yii\web\Controller;
 use yii\filters\AccessControl;
+use yii\filters\auth\HttpBasicAuth;
 
 /**
  * Default controller for the `price` module
@@ -30,7 +31,10 @@ class CategoriesController extends Controller
             'timer' => [
                 'class' => \app\components\ActionTimeFilter::className ()
 
-            ]
+            ]/*,
+            'basicAuth' => [
+                'class' => HttpBasicAuth::className(),
+            ]*/
         ];
     }
     
