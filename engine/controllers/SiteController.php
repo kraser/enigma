@@ -3,8 +3,7 @@
 namespace app\controllers;
 
 use Yii;
-use yii\filters\AccessControl;
-use yii\web\Controller;
+
 use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
@@ -12,11 +11,12 @@ use app\models\ContactForm;
 use app\models\EntryForm;
 use app\actions;
 
-class SiteController extends Controller
+class SiteController extends AllprintController
 {
     /**
      * @inheritdoc
      */
+    /*
     public function behaviors()
     {
         return [
@@ -39,10 +39,12 @@ class SiteController extends Controller
             ],
         ];
     }
+    */
 
     /**
      * @inheritdoc
      */
+    /*
     public function actions()
     {
         $actions = 
@@ -63,7 +65,7 @@ class SiteController extends Controller
         ];
         return $actions;
     }
-
+    */
     /**
      * Displays homepage.
      *

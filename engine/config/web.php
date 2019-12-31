@@ -15,7 +15,8 @@ $config = [
         '@mytheme' => '@app/myViews',
         '@cotheme' => '@app/views',
         '@cuber' => '@mytheme/cucumber',
-        '@fuckActions' => '@app/actions'
+        //'@fuckActions' => '@app/actions'
+        '@components' => '@app/components'
         
     ],
     'version' => '0.0.1',
@@ -85,9 +86,9 @@ $config = [
         'check' => 'app\controllers\CountryController'
     ],
     //Альтернативное имя файла layout 
-    'layout' => 'layout',
+    'layout' => 'main',
     'layoutPath' => '@cuber',
-    'viewPath' => '@cotheme'
+    'viewPath' => '@mytheme'
 ];
 
 if (YII_ENV_DEV) {

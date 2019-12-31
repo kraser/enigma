@@ -1,9 +1,9 @@
 <?php
 use yii\helpers\Html;
 use yii\widgets\LinkPager;
-$this->title = $this->context->title . "/" . Yii::$app->name;
+$this->title =  Yii::$app->name . " / " . $this->context->title;
 ?>
-<h1>Countries</h1>
+<h1>Сраны</h1>
 <?= LinkPager::widget(['pagination' => $pagination]) ?>
 <ul>
 <?php foreach ($countries as $country): ?>
